@@ -19,8 +19,8 @@ addons:
       secure: $SONAR_TOKEN
 
 script:
-  - ./mvnw clean install -B
-  -  mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarcloud.io
+  - mvn clean install -B
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarcloud.io
 
 cache:
   directories:
