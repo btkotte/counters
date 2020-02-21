@@ -1,0 +1,1 @@
+web java -Dserver.port=$PORT -Dspring.profiles.active=dev $JAVA_OPTS -jar target/counterapp-1.0.0-SNAPSHOT-exec.jar
