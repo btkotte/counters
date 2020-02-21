@@ -9,9 +9,6 @@ env:
   global:
     - COMMIT=${TRAVIS_COMMIT::7}
 
-before_install:
-  - chmod +x mvnw
-
 addons:
   sonarcloud:
     organization: "im-mr-kotte-github"
