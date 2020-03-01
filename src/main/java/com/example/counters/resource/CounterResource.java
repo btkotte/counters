@@ -40,8 +40,7 @@ public class CounterResource {
 
     @PatchMapping("/{name}/increment")
     public Mono<ResponseEntity<Counter>> increment(@PathVariable("name") final String name) {
-        return counterService.readOne(name)
-                .flatMap(counter -> counterService.incrementCounter(counter))
+        return counterService.incrementCounter(name)
                 .map(updatedCounter -> new ResponseEntity<>(updatedCounter, HttpStatus.OK))
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
